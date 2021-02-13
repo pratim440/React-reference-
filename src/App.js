@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Complex from "./useReducer/ComplexReducer";
+import Simple from "./useReducer/SimpleReducer";
+import ContextProvider from "./context_api/Context";
+import CompA from "./context_api/CompA";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Simple /> this is for reducer
+      <Complex /> this is for reducer */}
+      <ContextProvider value="hii">
+        <CompA />
+      </ContextProvider>
     </div>
   );
 }
